@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Ramaraja&display=swap');
+
+* {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    background-color: #E5F2C9;
+    color: #08415C;
+}
+
+h1 {
+    font-family: Ramaraja, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 62px;
+    color: #630606;
+    text-align: center;
+}
+
+h3 {
+    font-size: 32px;
+    font-family: Ramaraja, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    color: #8C4843;
+}
+
+img {
+    height: auto;
+    width: auto;
+}
+
+a {
+    color: #9E643C ;
+    font-weight: 600;
+}
