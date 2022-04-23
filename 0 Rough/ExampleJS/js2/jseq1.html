@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mountains</h1>
+
+    <div id="mountains"></div>
+    
+    <script>
+        const MOUNTAINS = [
+            { name: "Kilimanjaro    ", height: 5895, place: "   Tanzania" },
+            { name: "Everest    ", height: 8848, place: "   Nepal" },
+            { name: "Mount Fuji ", height: 3776, place: "    Japan" },
+            { name: "Vaalserberg    ", height: 323, place: "    Netherlands" },
+            { name: "Denali ", height: 6168, place: "    United States" },
+            { name: "Popocatepetl   ", height: 5465, place: "  Mexico" },
+            { name: "Mont Blanc ", height: 4808, place: "    Italy/France" }
+        ];
+
+        function tableCreation(array) {
+
+            let node = document.createElement('table')
+            
+            for (let i = -1; i <= array.length - 1; i++) {
+                
+                let node_child = document.createElement('tr')
+                if (i === -1) {
+                    
+                    Object.keys(array[0]).forEach(header => {
+                        let node_child_headre = document.createElement('th')
+                        node_child_headre.appendChild(document.createTextNode(header))
+                        node_child.appendChild(node_child_headre)
+                    });
+                    
+                } else {
+                    
+                    Object.values(array[i]).forEach( value => {
+                        let node_child_data = document.createElement('td')
+                        if (typeof value == "number") node_child_data.style.textAlign = "left";
+                        node_child_data.appendChild(document.createTextNode(value))
+                        node_child.appendChild(node_child_data)
+                    });
+
+                }
+                node.appendChild(node_child)
+            }
+            return node;
+        }
+
+        document.querySelector("#mountains").appendChild(tableCreation(MOUNTAINS))
+
+    </script>
+</body>
+</html>
